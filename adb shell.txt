@@ -1,0 +1,42 @@
+A-Here are the commands which can delete or modify the mobile app/services.
+
+1-adb devices
+2-adb shell
+
+now we are into oneplus root system .i.e.
+C:\platform-tools>adb shell
+OnePlus3T:/ 
+
+2-pm list packages
+
+after we have seen the packages exit to adb cmd and enable/disable services/applications
+ 
+3-exit
+
+now we can remove the application as follow
+
+4-adb shell pm uninstall --user 0 com.oneplus.calculator
+Success
+
+5-adb shell pm uninstall --user 0 com.android.contacts
+Success
+
+B-Now for boot image which will be played at boot:
+1-adb shell
+2-su
+3-cd /system/media
+4-ls
+audio bootanimation.zip themes
+ 
+To copy boot animation from shell to C drive
+C:\platform-tools>adb pull /system/media/bootanimation.zip C:\bootanimation\bootanimation.zip
+To push back animation to shell from C drive
+C:\platform-tools>adb push C:\bootanimation\bootanimation.zip /system/media/bootanimation.zip
+
+
+Set Proper Permissions
+adb shell
+su
+chmod 644 /system/media/bootanimation.zip
+
+
