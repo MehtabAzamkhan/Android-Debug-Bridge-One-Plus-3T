@@ -40,3 +40,8 @@ su
 chmod 644 /system/media/bootanimation.zip
 
 
+//command for application setup at homescreen
+adb shell dpm set-device-owner --user current --name com.dermscopev4/.MyAdminReceiver com.dermscopev4/.MyAdminReceiver
+
+
+
